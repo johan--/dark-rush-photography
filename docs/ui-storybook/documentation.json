@@ -55453,7 +55453,47 @@
         },
         {
             "name": "AppModule",
-            "id": "module-AppModule-6c229bd2c2c327ab8053f9e185936290-2",
+            "id": "module-AppModule-99267f1cce5a05f9f84301c42fbd7334-2",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "apps/website-host/src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { join } from 'path';\n\nimport { Module } from '@nestjs/common';\nimport { AngularUniversalModule } from '@nestjs/ng-universal';\n// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries\nimport { AppServerModule } from './../../../website/src/main.server';\nimport { AppController } from './app.controller';\nimport { AppService } from './app.service';\n\n@Module({\n  imports: [\n    AngularUniversalModule.forRoot({\n      bootstrap: AppServerModule,\n      viewsPath: join(process.cwd(), 'dist/website/browser'),\n    }),\n  ],\n  controllers: [AppController],\n  providers: [AppService],\n})\nexport class AppModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "AppService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-6c229bd2c2c327ab8053f9e185936290-3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
@@ -55514,46 +55554,6 @@
                             "name": "AppComponent"
                         }
                     ]
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AppModule",
-            "id": "module-AppModule-99267f1cce5a05f9f84301c42fbd7334-3",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "apps/website-host/src/app/app.module.ts",
-            "methods": [],
-            "sourceCode": "import { join } from 'path';\n\nimport { Module } from '@nestjs/common';\nimport { AngularUniversalModule } from '@nestjs/ng-universal';\n// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries\nimport { AppServerModule } from './../../../website/src/main.server';\nimport { AppController } from './app.controller';\nimport { AppService } from './app.service';\n\n@Module({\n  imports: [\n    AngularUniversalModule.forRoot({\n      bootstrap: AppServerModule,\n      viewsPath: join(process.cwd(), 'dist/website/browser'),\n    }),\n  ],\n  controllers: [AppController],\n  providers: [AppService],\n})\nexport class AppModule {}\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": [
-                        {
-                            "name": "AppService"
-                        }
-                    ]
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
                 },
                 {
                     "type": "classes",
@@ -58990,26 +58990,6 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/website/src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Env",
-                "defaultValue": "{\n  production: true,\n  apiBaseUrl: '%%API_BASE_URL%%',\n  auth: {\n    domain: '%%AUTH_DOMAIN%%',\n    clientId: '%%AUTH_CLIENT_ID%%',\n    audience: '%%AUTH_AUDIENCE%%',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        '/api/*',\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n      ],\n    },\n  },\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "apps/website/src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Env",
-                "defaultValue": "{\n  production: false,\n  apiBaseUrl: '',\n  auth: {\n    domain: 'auth.darkrushphotography.com',\n    clientId: 'itlDBOCejY2AxCCR4qNZRnI1AUwWb9O3',\n    audience: 'https://www.darkrushphotography.com',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n        '/api/*',\n      ],\n    },\n  },\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "apps/website-host/src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -59025,6 +59005,26 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/website/src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Env",
+                "defaultValue": "{\n  production: true,\n  apiBaseUrl: '%%API_BASE_URL%%',\n  auth: {\n    domain: '%%AUTH_DOMAIN%%',\n    clientId: '%%AUTH_CLIENT_ID%%',\n    audience: '%%AUTH_AUDIENCE%%',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        '/api/*',\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n      ],\n    },\n  },\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/website/src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Env",
+                "defaultValue": "{\n  production: false,\n  apiBaseUrl: '',\n  auth: {\n    domain: 'auth.darkrushphotography.com',\n    clientId: 'itlDBOCejY2AxCCR4qNZRnI1AUwWb9O3',\n    audience: 'https://www.darkrushphotography.com',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n        '/api/*',\n      ],\n    },\n  },\n}"
             },
             {
                 "name": "eventAdapter",
@@ -65827,30 +65827,6 @@
                     "defaultValue": "loadEnvironment()"
                 }
             ],
-            "apps/website/src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/website/src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Env",
-                    "defaultValue": "{\n  production: true,\n  apiBaseUrl: '%%API_BASE_URL%%',\n  auth: {\n    domain: '%%AUTH_DOMAIN%%',\n    clientId: '%%AUTH_CLIENT_ID%%',\n    audience: '%%AUTH_AUDIENCE%%',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        '/api/*',\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n      ],\n    },\n  },\n}"
-                }
-            ],
-            "apps/website/src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/website/src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Env",
-                    "defaultValue": "{\n  production: false,\n  apiBaseUrl: '',\n  auth: {\n    domain: 'auth.darkrushphotography.com',\n    clientId: 'itlDBOCejY2AxCCR4qNZRnI1AUwWb9O3',\n    audience: 'https://www.darkrushphotography.com',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n        '/api/*',\n      ],\n    },\n  },\n}"
-                }
-            ],
             "apps/website-host/src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -65873,6 +65849,30 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false,\n}"
+                }
+            ],
+            "apps/website/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/website/src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Env",
+                    "defaultValue": "{\n  production: true,\n  apiBaseUrl: '%%API_BASE_URL%%',\n  auth: {\n    domain: '%%AUTH_DOMAIN%%',\n    clientId: '%%AUTH_CLIENT_ID%%',\n    audience: '%%AUTH_AUDIENCE%%',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        '/api/*',\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n      ],\n    },\n  },\n}"
+                }
+            ],
+            "apps/website/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/website/src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Env",
+                    "defaultValue": "{\n  production: false,\n  apiBaseUrl: '',\n  auth: {\n    domain: 'auth.darkrushphotography.com',\n    clientId: 'itlDBOCejY2AxCCR4qNZRnI1AUwWb9O3',\n    audience: 'https://www.darkrushphotography.com',\n    httpInterceptor: {\n      //TODO: Refine this list\n      allowedList: [\n        {\n          uri: '/api/',\n          httpMethod: HttpMethod.Get,\n          allowAnonymous: true,\n        },\n        '/api/*',\n      ],\n    },\n  },\n}"
                 }
             ],
             "libs/website/data/src/lib/store/event/event.state.ts": [
