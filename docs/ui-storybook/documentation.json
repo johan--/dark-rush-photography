@@ -58624,7 +58624,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(\n  vaultName: string,\n  resourceGroup: ResourceGroup\n) => {\n  const clientConfig = getClientConfig();\n  const tenantId = clientConfig.then((config) => config.tenantId);\n  const currentPrincipal = clientConfig.then((config) => config.objectId);\n\n  return new Vault(vaultName, {\n    vaultName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    properties: {\n      sku: { family: 'A', name: SkuName.Standard },\n      tenantId,\n      accessPolicies: [\n        {\n          objectId: currentPrincipal,\n          tenantId,\n          permissions: {\n            secrets: ['delete', 'get', 'list', 'set'],\n          },\n        },\n      ],\n    },\n  });\n}"
+                "defaultValue": "(\n  vaultName: string,\n  resourceGroup: ResourceGroup\n) => {\n  const clientConfig = getClientConfig();\n  const tenantId = clientConfig.then((config) => config.tenantId);\n  const currentPrincipal = clientConfig.then((config) => config.objectId);\n\n  return new Vault(vaultName, {\n    vaultName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    properties: {\n      sku: { family: 'A', name: SkuName.Standard },\n      tenantId,\n      accessPolicies: [\n        {\n          objectId: currentPrincipal,\n          tenantId,\n          permissions: {\n            keys: ['delete', 'get', 'list', 'set'],\n            secrets: ['delete', 'get', 'list', 'set'],\n          },\n        },\n      ],\n    },\n  });\n}"
             },
             {
                 "name": "DEFAULT_ENTITY_GROUP",
@@ -66124,7 +66124,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(\n  vaultName: string,\n  resourceGroup: ResourceGroup\n) => {\n  const clientConfig = getClientConfig();\n  const tenantId = clientConfig.then((config) => config.tenantId);\n  const currentPrincipal = clientConfig.then((config) => config.objectId);\n\n  return new Vault(vaultName, {\n    vaultName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    properties: {\n      sku: { family: 'A', name: SkuName.Standard },\n      tenantId,\n      accessPolicies: [\n        {\n          objectId: currentPrincipal,\n          tenantId,\n          permissions: {\n            secrets: ['delete', 'get', 'list', 'set'],\n          },\n        },\n      ],\n    },\n  });\n}"
+                    "defaultValue": "(\n  vaultName: string,\n  resourceGroup: ResourceGroup\n) => {\n  const clientConfig = getClientConfig();\n  const tenantId = clientConfig.then((config) => config.tenantId);\n  const currentPrincipal = clientConfig.then((config) => config.objectId);\n\n  return new Vault(vaultName, {\n    vaultName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    properties: {\n      sku: { family: 'A', name: SkuName.Standard },\n      tenantId,\n      accessPolicies: [\n        {\n          objectId: currentPrincipal,\n          tenantId,\n          permissions: {\n            keys: ['delete', 'get', 'list', 'set'],\n            secrets: ['delete', 'get', 'list', 'set'],\n          },\n        },\n      ],\n    },\n  });\n}"
                 }
             ],
             "tools/ci/services/mongo-db-serverless.service.ts": [
