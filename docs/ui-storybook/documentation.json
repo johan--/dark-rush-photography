@@ -8245,12 +8245,12 @@
         },
         {
             "name": "PulumiConfig",
-            "id": "interface-PulumiConfig-a33334829c17c8edbffdaad1eaf57da5",
+            "id": "interface-PulumiConfig-14be0153cbf781227772e6ff618c141c",
             "file": "tools/ci/pulumi-config.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Config } from '@pulumi/pulumi';\n\nconst config = new Config();\n\nexport interface PulumiConfig {\n  readonly location: string;\n  readonly resourceGroupName: string;\n  readonly devMongoDbAccountName: string;\n  readonly devMongoDbDatabaseName: string;\n  readonly devMongoDbCollectionName: string;\n  readonly prodMongoDbAccountName: string;\n  readonly prodMongoDbDatabaseName: string;\n  readonly prodMongoDbCollectionName: string;\n  readonly devPrivateStorageAccountName: string;\n  readonly devPrivateBlobContainerName: string;\n  readonly devPrivateUsersTableName: string;\n  readonly prodPrivateStorageAccountName: string;\n  readonly prodPrivateBlobContainerName: string;\n  readonly prodPrivateUsersTableName: string;\n  readonly devPublicStorageAccountName: string;\n  readonly devPublicBlobContainerName: string;\n  readonly prodPublicStorageAccountName: string;\n  readonly prodPublicBlobContainerName: string;\n  readonly cdnProfileName: string;\n  readonly cdnEndpointName: string;\n  readonly containerRegistryName: string;\n  readonly nginxImageName: string;\n  readonly websiteImageName: string;\n  readonly apiImageName: string;\n  readonly socketImageName: string;\n  readonly appServicePlanName: string;\n  readonly webAppName: string;\n  readonly webAppApiUrl: string;\n}\n\nexport const getPulumiConfig = (): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  appServicePlanName: config.require('appServicePlanName'),\n  webAppName: config.require('webAppName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n});\n",
+            "sourceCode": "import { Config } from '@pulumi/pulumi';\n\nconst config = new Config();\n\nexport interface PulumiConfig {\n  readonly location: string;\n  readonly resourceGroupName: string;\n  readonly devMongoDbAccountName: string;\n  readonly devMongoDbDatabaseName: string;\n  readonly devMongoDbCollectionName: string;\n  readonly prodMongoDbAccountName: string;\n  readonly prodMongoDbDatabaseName: string;\n  readonly prodMongoDbCollectionName: string;\n  readonly devPrivateStorageAccountName: string;\n  readonly devPrivateBlobContainerName: string;\n  readonly devPrivateUsersTableName: string;\n  readonly prodPrivateStorageAccountName: string;\n  readonly prodPrivateBlobContainerName: string;\n  readonly prodPrivateUsersTableName: string;\n  readonly devPublicStorageAccountName: string;\n  readonly devPublicBlobContainerName: string;\n  readonly prodPublicStorageAccountName: string;\n  readonly prodPublicBlobContainerName: string;\n  readonly cdnProfileName: string;\n  readonly cdnEndpointName: string;\n  readonly containerRegistryName: string;\n  readonly nginxImageName: string;\n  readonly websiteImageName: string;\n  readonly apiImageName: string;\n  readonly socketImageName: string;\n  readonly mediaServiceStorageAccountName: string;\n  readonly mediaServiceName: string;\n  readonly vaultName: string;\n  readonly webAppApiUrl: string;\n  readonly appServicePlanName: string;\n}\n\nexport const getPulumiConfig = (): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n  appServicePlanName: config.require('appServicePlanName'),\n});\n",
             "properties": [
                 {
                     "name": "apiImageName",
@@ -8271,7 +8271,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 31,
+                    "line": 35,
                     "modifierKind": [
                         132
                     ]
@@ -8421,6 +8421,30 @@
                     ]
                 },
                 {
+                    "name": "mediaServiceName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 32,
+                    "modifierKind": [
+                        132
+                    ]
+                },
+                {
+                    "name": "mediaServiceStorageAccountName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 31,
+                    "modifierKind": [
+                        132
+                    ]
+                },
+                {
                     "name": "nginxImageName",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -8553,7 +8577,7 @@
                     ]
                 },
                 {
-                    "name": "webAppApiUrl",
+                    "name": "vaultName",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -8565,13 +8589,13 @@
                     ]
                 },
                 {
-                    "name": "webAppName",
+                    "name": "webAppApiUrl",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 32,
+                    "line": 34,
                     "modifierKind": [
                         132
                     ]
@@ -58123,6 +58147,46 @@
                 "defaultValue": "'https://www.darkrushphotography.com//roles'"
             },
             {
+                "name": "auth0ClientIdSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-AUTH0-CLIENT-ID',\n  interpolate`${process.env.NX_AUTH0_CLIENT_ID}`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "auth0ClientIdSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "auth0ClientIdSecret.urn"
+            },
+            {
+                "name": "auth0ClientSecretSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-AUTH0-CLIENT-SECRET',\n  interpolate`${process.env.NX_AUTH0_CLIENT_SECRET}`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "auth0ClientSecretSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "auth0ClientSecretSecret.urn"
+            },
+            {
                 "name": "authFeatureKey",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -58131,6 +58195,26 @@
                 "deprecationMessage": "",
                 "type": "string",
                 "defaultValue": "'auth'"
+            },
+            {
+                "name": "ayrshareApiKeySecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-AYRSHARE-API-KEY',\n  interpolate`${process.env.NX_AYRSHARE_API_KEY}`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "ayrshareApiKeySecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "ayrshareApiKeySecret.urn"
             },
             {
                 "name": "ayrsharePostImageOrVideoToFacebook$",
@@ -58293,6 +58377,16 @@
                 "defaultValue": "new Config()"
             },
             {
+                "name": "connectionStrings",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "all([\n  resourceGroup.name,\n  prodMongoDbAccount.name,\n]).apply(([resourceGroupName, accountName]) =>\n  listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n)"
+            },
+            {
                 "name": "containerRegistry",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -58400,7 +58494,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(\n  mediaServiceName: string,\n  resourceGroup: ResourceGroup,\n  mediaStorageAccount: StorageAccount\n): MediaService =>\n  new MediaService(mediaServiceName, {\n    location: resourceGroup.location,\n    resourceGroupName: resourceGroup.name,\n    storageAccounts: [\n      {\n        id: mediaStorageAccount.id,\n        type: 'Primary',\n      },\n    ],\n  })"
+                "defaultValue": "(\n  mediaServiceName: string,\n  resourceGroup: ResourceGroup,\n  mediaServiceStorageAccount: StorageAccount\n): MediaService =>\n  new MediaService(mediaServiceName, {\n    location: resourceGroup.location,\n    resourceGroupName: resourceGroup.name,\n    storageAccounts: [\n      {\n        id: mediaServiceStorageAccount.id,\n        type: 'Primary',\n      },\n    ],\n  })"
             },
             {
                 "name": "createMediaServiceStorageAccount",
@@ -58493,6 +58587,16 @@
                 "defaultValue": "(\n  publicStorageAccountName: string,\n  resourceGroup: ResourceGroup\n): StorageAccount =>\n  new StorageAccount(publicStorageAccountName, {\n    accountName: publicStorageAccountName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: {\n      name: SkuName.Standard_LRS,\n    },\n    kind: Kind.StorageV2,\n    allowBlobPublicAccess: true,\n    enableHttpsTrafficOnly: true,\n    minimumTlsVersion: 'TLS1_2',\n  })"
             },
             {
+                "name": "createSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/services/key-vault.service.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  secretName: string,\n  secretValue: Output<string>,\n  resourceGroup: ResourceGroup,\n  vault: Vault\n): Secret =>\n  new Secret(secretName, {\n    properties: {\n      value: secretValue,\n    },\n    resourceGroupName: resourceGroup.name,\n    secretName: secretName,\n    vaultName: vault.name,\n  })"
+            },
+            {
                 "name": "createServerlessMongoDbAccount",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -58511,6 +58615,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(fileName: string): Observable<string> => {\n  const filePath = path.join(os.tmpdir(), uuidv4(), fileName);\n  return from(fs.ensureFile(filePath)).pipe(mapTo(filePath));\n}"
+            },
+            {
+                "name": "createVault",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/services/key-vault.service.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  vaultName: string,\n  resourceGroup: ResourceGroup\n) => {\n  const clientConfig = getClientConfig();\n  const tenantId = clientConfig.then((config) => config.tenantId);\n  const currentPrincipal = clientConfig.then((config) => config.objectId);\n\n  return new Vault(vaultName, {\n    vaultName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    properties: {\n      sku: { family: 'A', name: SkuName.Standard },\n      tenantId,\n      accessPolicies: [\n        {\n          objectId: currentPrincipal,\n          tenantId,\n          permissions: {\n            secrets: ['delete', 'get', 'list', 'set'],\n          },\n        },\n      ],\n    },\n  });\n}"
             },
             {
                 "name": "DEFAULT_ENTITY_GROUP",
@@ -58863,6 +58977,66 @@
                 "defaultValue": "devPublicStorageAccount.urn"
             },
             {
+                "name": "dockerRegistryServerPasswordSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-PASSWORD',\n  adminAcrUser.password,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "dockerRegistryServerPasswordSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "dockerRegistryServerPasswordSecret.urn"
+            },
+            {
+                "name": "dockerRegistryServerUrlSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-URL',\n  interpolate`${containerRegistry.name}.azurecr.io`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "dockerRegistryServerUrlSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "dockerRegistryServerUrlSecret.urn"
+            },
+            {
+                "name": "dockerRegistryServerUsernameSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-USERNAME',\n  adminAcrUser.username,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "dockerRegistryServerUsernameSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "dockerRegistryServerUsernameSecret.urn"
+            },
+            {
                 "name": "DocumentSchema",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -58911,6 +59085,46 @@
                 "deprecationMessage": "",
                 "type": "string",
                 "defaultValue": "'x-drp-api-admin-key'"
+            },
+            {
+                "name": "drpApiAdminKeySecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-DRP-API-ADMIN-KEY',\n  interpolate`${process.env.NX_DRP_API_ADMIN_KEY}`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "drpApiAdminKeySecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "drpApiAdminKeySecret.urn"
+            },
+            {
+                "name": "drpApiUrlSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-DRP-API-URL',\n  interpolate`${pulumiConfig.webAppApiUrl}`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "drpApiUrlSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "drpApiUrlSecret.urn"
             },
             {
                 "name": "DUMMY_MONGODB_ID",
@@ -59890,7 +60104,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  appServicePlanName: config.require('appServicePlanName'),\n  webAppName: config.require('webAppName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n})"
+                "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n  appServicePlanName: config.require('appServicePlanName'),\n})"
             },
             {
                 "name": "getReview",
@@ -60513,6 +60727,46 @@
                 "defaultValue": "new Map<MediaProcessType, EntityType>([\n  [MediaProcessType.AppleResource, EntityType.MediaProcessAppleResource],\n  [MediaProcessType.Icon, EntityType.MediaProcessIcon],\n  [MediaProcessType.ImageVideo, EntityType.MediaProcessImageVideo],\n  [MediaProcessType.Png, EntityType.MediaProcessPng],\n  [MediaProcessType.SocialMediaImage, EntityType.MediaProcessSocialMediaImage],\n  [MediaProcessType.SocialMediaVideo, EntityType.MediaProcessSocialMediaVideo],\n])"
             },
             {
+                "name": "mediaService",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createMediaService(\n  pulumiConfig.mediaServiceName,\n  resourceGroup,\n  mediaServiceStorageAccount\n)"
+            },
+            {
+                "name": "mediaServiceStorageAccount",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createMediaServiceStorageAccount(\n  pulumiConfig.mediaServiceStorageAccountName,\n  resourceGroup\n)"
+            },
+            {
+                "name": "mediaServiceStorageAccountUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "mediaServiceStorageAccount.urn"
+            },
+            {
+                "name": "mediaServiceUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "mediaService.urn"
+            },
+            {
                 "name": "mediaStateToAzureStorageTypeMap",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -60533,116 +60787,6 @@
                 "defaultValue": "(\n  images: Image[],\n  videoFilePath: string,\n  pixels: MediaDimensionPixels\n): string => {\n  const firstImageDisplayFrames = 50;\n  const imageDisplayFrames = 75;\n  const fadeFrames = 25;\n  const profile = 'atsc_720p_25'; // HD 720p 25 fps, consumer H.264 or MPEG-4\"\n\n  let isFirstFrame = true;\n  let imageProperties = '';\n  for (const image of images) {\n    if (isFirstFrame) {\n      imageProperties += `\"${image.fileName}\" out=${firstImageDisplayFrames}`;\n      isFirstFrame = false;\n    }\n    imageProperties += ` \"${image.fileName}\" out=${imageDisplayFrames} -mix ${fadeFrames} -mixer luma`;\n  }\n  const command = `-verbose -profile ${profile} ${imageProperties} -consumer avformat:${videoFilePath} width=${pixels.width} height=${pixels.height} vcodec=libx264\"`;\n  Logger.log(command, meltVideo.name);\n  return command;\n}"
             },
             {
-                "name": "mockComment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/comment.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): Comment => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  mediaId: faker.datatype.uuid(),\n  order: faker.datatype.number(),\n  user: {\n    ...mockUser(),\n  },\n  text: faker.lorem.sentence(),\n})"
-            },
-            {
-                "name": "mockDestinationUpdate",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/destination-update.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): DestinationUpdate => ({\n  slug: faker.lorem.word().toLowerCase(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: [faker.lorem.word(), faker.lorem.word()],\n  datePublished: faker.date.recent().toISOString(),\n  location: { ...mockLocation() },\n  useTileImage: faker.datatype.boolean(),\n  text: [faker.lorem.paragraph(), faker.lorem.paragraph()],\n  hasExtendedReality: faker.datatype.boolean(),\n  websiteUrl: faker.internet.url(),\n  socialMediaUrls: [\n    {\n      type: faker.random.arrayElement(Object.values(SocialMediaType)),\n      url: faker.internet.url(),\n    },\n    {\n      type: faker.random.arrayElement(Object.values(SocialMediaType)),\n      url: faker.internet.url(),\n    },\n  ],\n})"
-            },
-            {
-                "name": "mockEmotion",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/emotion.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): Emotion => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  mediaId: faker.datatype.uuid(),\n  commentId: faker.datatype.uuid(),\n  type: faker.random.arrayElement(Object.values(EmotionType)),\n  user: {\n    ...mockUser(),\n  },\n})"
-            },
-            {
-                "name": "mockEventCreate",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/event-create.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): EventCreate => ({\n  group: faker.date.soon().getFullYear().toString(),\n  slug: faker.lorem.word().toLowerCase(),\n})"
-            },
-            {
-                "name": "mockEventUpdate",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/event-update.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): EventUpdate => ({\n  group: faker.date.soon().getFullYear().toString(),\n  slug: faker.lorem.word().toLowerCase(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: [faker.lorem.word(), faker.lorem.word()],\n  dateCreated: faker.date.recent().toISOString(),\n  datePublished: faker.date.recent().toISOString(),\n  location: { ...mockLocation() },\n  useTileImage: faker.datatype.boolean(),\n  text: [faker.lorem.paragraph(), faker.lorem.paragraph()],\n})"
-            },
-            {
-                "name": "mockImage",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/image.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): Image => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  fileName: faker.lorem.word().toLowerCase(),\n  state: faker.random.arrayElement(Object.values(MediaState)),\n  order: faker.datatype.number(),\n  isStared: faker.datatype.boolean(),\n  isLoved: faker.datatype.boolean(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: `${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem.word().toLowerCase()}`,\n  dateCreated: faker.date.recent().toISOString(),\n  datePublished: faker.date.recent().toISOString(),\n  isGenerated: faker.datatype.boolean(),\n  isProcessing: faker.datatype.boolean(),\n})"
-            },
-            {
-                "name": "mockImageDimension",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/image-dimension.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): ImageDimension => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  imageId: faker.datatype.uuid(),\n  type: faker.random.arrayElement(Object.values(ImageDimensionType)),\n  pixels: {\n    width: faker.datatype.number(),\n    height: faker.datatype.number(),\n  },\n  threeSixtyImageSettings: {\n    pitch: faker.datatype.number(),\n    yaw: faker.datatype.number(),\n    hfov: faker.datatype.number(),\n  },\n})"
-            },
-            {
-                "name": "mockLocation",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/location.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): Location => ({\n  place: faker.company.companyName(),\n  street: faker.address.streetAddress(),\n  stateOrProvince: faker.address.state(),\n  zipCode: faker.address.zipCode(),\n  country: faker.address.country(),\n  geo: {\n    latitude: faker.address.latitude(),\n    longitude: faker.address.longitude(),\n  },\n})"
-            },
-            {
-                "name": "mockUser",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/user.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): User => ({\n  email: faker.internet.email(),\n  name: faker.name.findName(faker.name.firstName(), faker.name.lastName()),\n  image: faker.image.dataUri(),\n})"
-            },
-            {
-                "name": "mockVideo",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/video.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): Video => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  fileName: faker.lorem.word().toLowerCase(),\n  state: faker.random.arrayElement(Object.values(MediaState)),\n  order: faker.datatype.number(),\n  isStared: faker.datatype.boolean(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: `${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem.word().toLowerCase()}`,\n  dateCreated: faker.date.recent().toISOString(),\n  datePublished: faker.date.recent().toISOString(),\n  coverImageId: faker.datatype.uuid(),\n  hlsUrl: faker.internet.url(),\n  isFlyOver: faker.datatype.boolean(),\n  isGenerated: faker.datatype.boolean(),\n  isProcessing: faker.datatype.boolean(),\n})"
-            },
-            {
-                "name": "mockVideoDimension",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared/types/src/lib/mocks/video-dimension.mock.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(): VideoDimension => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  videoId: faker.datatype.uuid(),\n  type: faker.random.arrayElement(Object.values(VideoDimensionType)),\n  pixels: {\n    width: faker.datatype.number(),\n    height: faker.datatype.number(),\n  },\n})"
-            },
-            {
                 "name": "moduleFilename",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -60651,6 +60795,26 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(mainModule && mainModule.filename) || ''"
+            },
+            {
+                "name": "mongoDbConnectionStringSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-MONGO-DB-CONNECTION-STRING',\n  connectionStrings.apply((cs) => cs.connectionStrings![0].connectionString),\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "mongoDbConnectionStringSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "mongoDbConnectionStringSecret.urn"
             },
             {
                 "name": "newAbout",
@@ -60863,6 +61027,46 @@
                 "defaultValue": "(): void => {\n  Logger.log('Posting to google business');\n}"
             },
             {
+                "name": "privateBlobConnectionStringSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-PRIVATE-BLOB-CONNECTION-STRING',\n  prodPrivateStorageAccount.primaryEndpoints.blob,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "privateBlobConnectionStringSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "privateBlobConnectionStringSecret.urn"
+            },
+            {
+                "name": "privateTableConnectionStringSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-PRIVATE-TABLE-CONNECTION-STRING',\n  prodPrivateStorageAccount.primaryEndpoints.table,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "privateTableConnectionStringSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "privateTableConnectionStringSecret.urn"
+            },
+            {
                 "name": "prodMongoDb",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61031,6 +61235,26 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(): CustomDecorator<string> =>\n  SetMetadata(IS_PUBLIC, true)"
+            },
+            {
+                "name": "publicBlobConnectionStringSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-PUBLIC-BLOB-CONNECTION-STRING',\n  prodPublicStorageAccount.primaryEndpoints.blob,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "publicBlobConnectionStringSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "publicBlobConnectionStringSecret.urn"
             },
             {
                 "name": "pulumiConfig",
@@ -61523,6 +61747,26 @@
                 "defaultValue": "[\n  {\n    type: VideoDimensionType.ThreeSixtyFacebook,\n    pixels: { width: 1280, height: 720 },\n  },\n  {\n    type: VideoDimensionType.ThreeSixtyGoogleBusiness,\n    pixels: { width: 1280, height: 720 },\n  },\n  {\n    type: VideoDimensionType.ThreeSixtyInstagram,\n    pixels: { width: 1080, height: 1080 },\n  },\n  {\n    type: VideoDimensionType.ThreeSixtyLinkedIn,\n    pixels: { width: 1280, height: 720 },\n  },\n  {\n    type: VideoDimensionType.ThreeSixtyYouTube,\n    pixels: { width: 1280, height: 720 },\n  },\n]"
             },
             {
+                "name": "tinyPngApiKeySecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'NX-TINY-PNG-API-KEY',\n  interpolate`${process.env.NX_TINY_PNG_API_KEY}`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "tinyPngApiKeySecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "tinyPngApiKeySecret.urn"
+            },
+            {
                 "name": "toComment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61740,18 +61984,6 @@
                 "defaultValue": "createAction(\n  '[Review] Update Review Success',\n  props<{ updatedReview: Update<Review> }>()\n)"
             },
             {
-                "name": "updateWebApp",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/services/app-service.service.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(\n  webAppName: string,\n  webAppApiUrl: string,\n  resourceGroup: ResourceGroup,\n  prodMongoDbAccount: DatabaseAccount,\n  prodPrivateStorageAccount: StorageAccount,\n  prodPublicStorageAccount: StorageAccount,\n  containerRegistry: Registry,\n  adminAcrUser: AdminAcrUser,\n  appServicePlan: AppServicePlan\n): WebApp => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    prodMongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n\n  return new WebApp(\n    webAppName,\n    {\n      resourceGroupName: resourceGroup.name,\n      serverFarmId: appServicePlan.id,\n      siteConfig: {\n        appSettings: [\n          {\n            name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE',\n            value: 'true',\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_URL',\n            value: `${containerRegistry.name}.azurecr.io`,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_USERNAME',\n            value: adminAcrUser.username,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_PASSWORD',\n            value: adminAcrUser.password,\n          },\n          {\n            name: 'NX_DRP_API_URL',\n            value: webAppApiUrl,\n          },\n          {\n            name: 'NX_MONGO_DB_CONNECTION_STRING',\n            value: connectionStrings.apply(\n              (cs) => cs.connectionStrings![0].connectionString\n            ),\n          },\n          {\n            name: 'NX_PRIVATE_BLOB_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_PRIVATE_TABLE_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.table,\n          },\n          {\n            name: 'NX_PUBLIC_BLOB_CONNECTION_STRING',\n            value: prodPublicStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_DRP_API_ADMIN_KEY',\n            value: process.env.NX_DRP_API_ADMIN_KEY,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_ID',\n            value: process.env.NX_AUTH0_CLIENT_ID,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_SECRET',\n            value: process.env.NX_AUTH0_CLIENT_SECRET,\n          },\n          {\n            name: 'NX_TINY_PNG_API_KEY',\n            value: process.env.NX_TINY_PNG_API_KEY,\n          },\n          {\n            name: 'NX_AYRSHARE_API_KEY',\n            value: process.env.NX_AYRSHARE_API_KEY,\n          },\n        ],\n      },\n    },\n    {\n      //import:\n      //  '/subscriptions/deeabc6a-57e8-40df-889e-eb7f263360cc/resourceGroups/drp-rg/providers/Microsoft.Web/sites/dark-rush-photography',\n      ignoreChanges: [\n        'clientAffinityEnabled',\n        'clientCertEnabled',\n        'clientCertMode',\n        'containerSize',\n        'customDomainVerificationId',\n        'dailyMemoryTimeQuota',\n        'enabled',\n        'hostNameSslStates',\n        'hostNamesDisabled',\n        'httpsOnly',\n        'keyVaultReferenceIdentity',\n        'kind',\n        'redundancyMode',\n        'storageAccountRequired',\n        //'siteConfig',\n      ],\n    }\n  );\n}",
-                "rawdescription": "IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)",
-                "description": "<p>IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)</p>\n"
-            },
-            {
                 "name": "uploadBufferToBlob$",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61922,6 +62154,26 @@
                 "defaultValue": "(\n  documentModel: DocumentModel\n): DocumentModel => {\n  if (!documentModel.isProcessing) {\n    throw new ConflictException(\n      'Entity cannot be modified unless it is being processed'\n    );\n  }\n  return documentModel;\n}"
             },
             {
+                "name": "vault",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createVault(pulumiConfig.vaultName, resourceGroup)"
+            },
+            {
+                "name": "vaultUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "vault.urn"
+            },
+            {
                 "name": "VIDEO_RESOLUTIONS",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61952,26 +62204,6 @@
                 "defaultValue": "{\n  id: { type: String, required: true },\n  entityId: { type: String, required: true },\n  fileName: { type: String, required: true },\n  state: {\n    type: String,\n    enum: Object.keys(MediaState),\n    required: true,\n  },\n  order: { type: Number, required: true },\n  isStared: { type: Boolean, required: true },\n  title: { type: String, required: true },\n  description: { type: String, required: true },\n  keywords: { type: String, required: true },\n  dateCreated: { type: String, required: true },\n  datePublished: { type: String, required: true },\n  coverImageId: { type: String, required: true },\n  hlsUrl: { type: String, required: true },\n  isFlyOver: { type: Boolean, required: true },\n  isGenerated: { type: Boolean, required: true },\n  isProcessing: { type: Boolean, required: true },\n}"
             },
             {
-                "name": "webApp",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "updateWebApp(\n  pulumiConfig.webAppName,\n  pulumiConfig.webAppApiUrl,\n  resourceGroup,\n  prodMongoDbAccount,\n  prodPrivateStorageAccount,\n  prodPublicStorageAccount,\n  containerRegistry,\n  adminAcrUser,\n  appServicePlan\n)"
-            },
-            {
-                "name": "webAppUrn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "webApp.urn"
-            },
-            {
                 "name": "websiteImage",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61990,6 +62222,26 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "websiteImage.urn"
+            },
+            {
+                "name": "websitesEnableAppServiceStorageSecret",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSecret(\n  'WEBSITES-ENABLE-APP-SERVICE-STORAGE',\n  interpolate`true`,\n  resourceGroup,\n  vault\n)"
+            },
+            {
+                "name": "websitesEnableAppServiceStorageSecretUrn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "websitesEnableAppServiceStorageSecret.urn"
             },
             {
                 "name": "writeStreamToFile$",
@@ -64485,6 +64737,66 @@
                     "defaultValue": "appServicePlan.urn"
                 },
                 {
+                    "name": "auth0ClientIdSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-AUTH0-CLIENT-ID',\n  interpolate`${process.env.NX_AUTH0_CLIENT_ID}`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "auth0ClientIdSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "auth0ClientIdSecret.urn"
+                },
+                {
+                    "name": "auth0ClientSecretSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-AUTH0-CLIENT-SECRET',\n  interpolate`${process.env.NX_AUTH0_CLIENT_SECRET}`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "auth0ClientSecretSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "auth0ClientSecretSecret.urn"
+                },
+                {
+                    "name": "ayrshareApiKeySecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-AYRSHARE-API-KEY',\n  interpolate`${process.env.NX_AYRSHARE_API_KEY}`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "ayrshareApiKeySecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "ayrshareApiKeySecret.urn"
+                },
+                {
                     "name": "cdnEndpoint",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -64523,6 +64835,16 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "cdnProfile.urn"
+                },
+                {
+                    "name": "connectionStrings",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "all([\n  resourceGroup.name,\n  prodMongoDbAccount.name,\n]).apply(([resourceGroupName, accountName]) =>\n  listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n)"
                 },
                 {
                     "name": "containerRegistry",
@@ -64705,6 +65027,166 @@
                     "defaultValue": "devPublicStorageAccount.urn"
                 },
                 {
+                    "name": "dockerRegistryServerPasswordSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-PASSWORD',\n  adminAcrUser.password,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "dockerRegistryServerPasswordSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "dockerRegistryServerPasswordSecret.urn"
+                },
+                {
+                    "name": "dockerRegistryServerUrlSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-URL',\n  interpolate`${containerRegistry.name}.azurecr.io`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "dockerRegistryServerUrlSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "dockerRegistryServerUrlSecret.urn"
+                },
+                {
+                    "name": "dockerRegistryServerUsernameSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-USERNAME',\n  adminAcrUser.username,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "dockerRegistryServerUsernameSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "dockerRegistryServerUsernameSecret.urn"
+                },
+                {
+                    "name": "drpApiAdminKeySecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-DRP-API-ADMIN-KEY',\n  interpolate`${process.env.NX_DRP_API_ADMIN_KEY}`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "drpApiAdminKeySecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "drpApiAdminKeySecret.urn"
+                },
+                {
+                    "name": "drpApiUrlSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-DRP-API-URL',\n  interpolate`${pulumiConfig.webAppApiUrl}`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "drpApiUrlSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "drpApiUrlSecret.urn"
+                },
+                {
+                    "name": "mediaService",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createMediaService(\n  pulumiConfig.mediaServiceName,\n  resourceGroup,\n  mediaServiceStorageAccount\n)"
+                },
+                {
+                    "name": "mediaServiceStorageAccount",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createMediaServiceStorageAccount(\n  pulumiConfig.mediaServiceStorageAccountName,\n  resourceGroup\n)"
+                },
+                {
+                    "name": "mediaServiceStorageAccountUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "mediaServiceStorageAccount.urn"
+                },
+                {
+                    "name": "mediaServiceUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "mediaService.urn"
+                },
+                {
+                    "name": "mongoDbConnectionStringSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-MONGO-DB-CONNECTION-STRING',\n  connectionStrings.apply((cs) => cs.connectionStrings![0].connectionString),\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "mongoDbConnectionStringSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "mongoDbConnectionStringSecret.urn"
+                },
+                {
                     "name": "nginxImage",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -64723,6 +65205,46 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "nginxImage.urn"
+                },
+                {
+                    "name": "privateBlobConnectionStringSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-PRIVATE-BLOB-CONNECTION-STRING',\n  prodPrivateStorageAccount.primaryEndpoints.blob,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "privateBlobConnectionStringSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "privateBlobConnectionStringSecret.urn"
+                },
+                {
+                    "name": "privateTableConnectionStringSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-PRIVATE-TABLE-CONNECTION-STRING',\n  prodPrivateStorageAccount.primaryEndpoints.table,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "privateTableConnectionStringSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "privateTableConnectionStringSecret.urn"
                 },
                 {
                     "name": "prodMongoDb",
@@ -64885,6 +65407,26 @@
                     "defaultValue": "prodPublicStorageAccount.urn"
                 },
                 {
+                    "name": "publicBlobConnectionStringSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'NX-PUBLIC-BLOB-CONNECTION-STRING',\n  prodPublicStorageAccount.primaryEndpoints.blob,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "publicBlobConnectionStringSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "publicBlobConnectionStringSecret.urn"
+                },
+                {
                     "name": "pulumiConfig",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -64935,24 +65477,44 @@
                     "defaultValue": "socketImage.urn"
                 },
                 {
-                    "name": "webApp",
+                    "name": "tinyPngApiKeySecret",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "tools/ci/index.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "updateWebApp(\n  pulumiConfig.webAppName,\n  pulumiConfig.webAppApiUrl,\n  resourceGroup,\n  prodMongoDbAccount,\n  prodPrivateStorageAccount,\n  prodPublicStorageAccount,\n  containerRegistry,\n  adminAcrUser,\n  appServicePlan\n)"
+                    "defaultValue": "createSecret(\n  'NX-TINY-PNG-API-KEY',\n  interpolate`${process.env.NX_TINY_PNG_API_KEY}`,\n  resourceGroup,\n  vault\n)"
                 },
                 {
-                    "name": "webAppUrn",
+                    "name": "tinyPngApiKeySecretUrn",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "tools/ci/index.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "webApp.urn"
+                    "defaultValue": "tinyPngApiKeySecret.urn"
+                },
+                {
+                    "name": "vault",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createVault(pulumiConfig.vaultName, resourceGroup)"
+                },
+                {
+                    "name": "vaultUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "vault.urn"
                 },
                 {
                     "name": "websiteImage",
@@ -64973,6 +65535,26 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "websiteImage.urn"
+                },
+                {
+                    "name": "websitesEnableAppServiceStorageSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSecret(\n  'WEBSITES-ENABLE-APP-SERVICE-STORAGE',\n  interpolate`true`,\n  resourceGroup,\n  vault\n)"
+                },
+                {
+                    "name": "websitesEnableAppServiceStorageSecretUrn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "websitesEnableAppServiceStorageSecret.urn"
                 }
             ],
             "libs/web-socket/util/src/lib/api/api-auth.functions.ts": [
@@ -65308,7 +65890,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  appServicePlanName: config.require('appServicePlanName'),\n  webAppName: config.require('webAppName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n})"
+                    "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n  appServicePlanName: config.require('appServicePlanName'),\n})"
                 }
             ],
             "tools/ci/services/app-service.service.ts": [
@@ -65321,18 +65903,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    sku: {\n      capacity: 1,\n      family: 'S',\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n    },\n  })"
-                },
-                {
-                    "name": "updateWebApp",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/services/app-service.service.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(\n  webAppName: string,\n  webAppApiUrl: string,\n  resourceGroup: ResourceGroup,\n  prodMongoDbAccount: DatabaseAccount,\n  prodPrivateStorageAccount: StorageAccount,\n  prodPublicStorageAccount: StorageAccount,\n  containerRegistry: Registry,\n  adminAcrUser: AdminAcrUser,\n  appServicePlan: AppServicePlan\n): WebApp => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    prodMongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n\n  return new WebApp(\n    webAppName,\n    {\n      resourceGroupName: resourceGroup.name,\n      serverFarmId: appServicePlan.id,\n      siteConfig: {\n        appSettings: [\n          {\n            name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE',\n            value: 'true',\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_URL',\n            value: `${containerRegistry.name}.azurecr.io`,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_USERNAME',\n            value: adminAcrUser.username,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_PASSWORD',\n            value: adminAcrUser.password,\n          },\n          {\n            name: 'NX_DRP_API_URL',\n            value: webAppApiUrl,\n          },\n          {\n            name: 'NX_MONGO_DB_CONNECTION_STRING',\n            value: connectionStrings.apply(\n              (cs) => cs.connectionStrings![0].connectionString\n            ),\n          },\n          {\n            name: 'NX_PRIVATE_BLOB_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_PRIVATE_TABLE_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.table,\n          },\n          {\n            name: 'NX_PUBLIC_BLOB_CONNECTION_STRING',\n            value: prodPublicStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_DRP_API_ADMIN_KEY',\n            value: process.env.NX_DRP_API_ADMIN_KEY,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_ID',\n            value: process.env.NX_AUTH0_CLIENT_ID,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_SECRET',\n            value: process.env.NX_AUTH0_CLIENT_SECRET,\n          },\n          {\n            name: 'NX_TINY_PNG_API_KEY',\n            value: process.env.NX_TINY_PNG_API_KEY,\n          },\n          {\n            name: 'NX_AYRSHARE_API_KEY',\n            value: process.env.NX_AYRSHARE_API_KEY,\n          },\n        ],\n      },\n    },\n    {\n      //import:\n      //  '/subscriptions/deeabc6a-57e8-40df-889e-eb7f263360cc/resourceGroups/drp-rg/providers/Microsoft.Web/sites/dark-rush-photography',\n      ignoreChanges: [\n        'clientAffinityEnabled',\n        'clientCertEnabled',\n        'clientCertMode',\n        'containerSize',\n        'customDomainVerificationId',\n        'dailyMemoryTimeQuota',\n        'enabled',\n        'hostNameSslStates',\n        'hostNamesDisabled',\n        'httpsOnly',\n        'keyVaultReferenceIdentity',\n        'kind',\n        'redundancyMode',\n        'storageAccountRequired',\n        //'siteConfig',\n      ],\n    }\n  );\n}",
-                    "rawdescription": "IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)",
-                    "description": "<p>IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)</p>\n"
                 }
             ],
             "tools/ci/services/cdn.service.ts": [
@@ -65434,7 +66004,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(\n  mediaServiceName: string,\n  resourceGroup: ResourceGroup,\n  mediaStorageAccount: StorageAccount\n): MediaService =>\n  new MediaService(mediaServiceName, {\n    location: resourceGroup.location,\n    resourceGroupName: resourceGroup.name,\n    storageAccounts: [\n      {\n        id: mediaStorageAccount.id,\n        type: 'Primary',\n      },\n    ],\n  })"
+                    "defaultValue": "(\n  mediaServiceName: string,\n  resourceGroup: ResourceGroup,\n  mediaServiceStorageAccount: StorageAccount\n): MediaService =>\n  new MediaService(mediaServiceName, {\n    location: resourceGroup.location,\n    resourceGroupName: resourceGroup.name,\n    storageAccounts: [\n      {\n        id: mediaServiceStorageAccount.id,\n        type: 'Primary',\n      },\n    ],\n  })"
                 },
                 {
                     "name": "createMediaServiceStorageAccount",
@@ -65533,6 +66103,28 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(\n  publicStorageAccountName: string,\n  resourceGroup: ResourceGroup\n): StorageAccount =>\n  new StorageAccount(publicStorageAccountName, {\n    accountName: publicStorageAccountName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: {\n      name: SkuName.Standard_LRS,\n    },\n    kind: Kind.StorageV2,\n    allowBlobPublicAccess: true,\n    enableHttpsTrafficOnly: true,\n    minimumTlsVersion: 'TLS1_2',\n  })"
+                }
+            ],
+            "tools/ci/services/key-vault.service.ts": [
+                {
+                    "name": "createSecret",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/services/key-vault.service.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(\n  secretName: string,\n  secretValue: Output<string>,\n  resourceGroup: ResourceGroup,\n  vault: Vault\n): Secret =>\n  new Secret(secretName, {\n    properties: {\n      value: secretValue,\n    },\n    resourceGroupName: resourceGroup.name,\n    secretName: secretName,\n    vaultName: vault.name,\n  })"
+                },
+                {
+                    "name": "createVault",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/services/key-vault.service.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(\n  vaultName: string,\n  resourceGroup: ResourceGroup\n) => {\n  const clientConfig = getClientConfig();\n  const tenantId = clientConfig.then((config) => config.tenantId);\n  const currentPrincipal = clientConfig.then((config) => config.objectId);\n\n  return new Vault(vaultName, {\n    vaultName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    properties: {\n      sku: { family: 'A', name: SkuName.Standard },\n      tenantId,\n      accessPolicies: [\n        {\n          objectId: currentPrincipal,\n          tenantId,\n          permissions: {\n            secrets: ['delete', 'get', 'list', 'set'],\n          },\n        },\n      ],\n    },\n  });\n}"
                 }
             ],
             "tools/ci/services/mongo-db-serverless.service.ts": [
@@ -67499,138 +68091,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(\n  images: Image[],\n  videoFilePath: string,\n  pixels: MediaDimensionPixels\n): string => {\n  const firstImageDisplayFrames = 50;\n  const imageDisplayFrames = 75;\n  const fadeFrames = 25;\n  const profile = 'atsc_720p_25'; // HD 720p 25 fps, consumer H.264 or MPEG-4\"\n\n  let isFirstFrame = true;\n  let imageProperties = '';\n  for (const image of images) {\n    if (isFirstFrame) {\n      imageProperties += `\"${image.fileName}\" out=${firstImageDisplayFrames}`;\n      isFirstFrame = false;\n    }\n    imageProperties += ` \"${image.fileName}\" out=${imageDisplayFrames} -mix ${fadeFrames} -mixer luma`;\n  }\n  const command = `-verbose -profile ${profile} ${imageProperties} -consumer avformat:${videoFilePath} width=${pixels.width} height=${pixels.height} vcodec=libx264\"`;\n  Logger.log(command, meltVideo.name);\n  return command;\n}"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/comment.mock.ts": [
-                {
-                    "name": "mockComment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/comment.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): Comment => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  mediaId: faker.datatype.uuid(),\n  order: faker.datatype.number(),\n  user: {\n    ...mockUser(),\n  },\n  text: faker.lorem.sentence(),\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/destination-update.mock.ts": [
-                {
-                    "name": "mockDestinationUpdate",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/destination-update.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): DestinationUpdate => ({\n  slug: faker.lorem.word().toLowerCase(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: [faker.lorem.word(), faker.lorem.word()],\n  datePublished: faker.date.recent().toISOString(),\n  location: { ...mockLocation() },\n  useTileImage: faker.datatype.boolean(),\n  text: [faker.lorem.paragraph(), faker.lorem.paragraph()],\n  hasExtendedReality: faker.datatype.boolean(),\n  websiteUrl: faker.internet.url(),\n  socialMediaUrls: [\n    {\n      type: faker.random.arrayElement(Object.values(SocialMediaType)),\n      url: faker.internet.url(),\n    },\n    {\n      type: faker.random.arrayElement(Object.values(SocialMediaType)),\n      url: faker.internet.url(),\n    },\n  ],\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/emotion.mock.ts": [
-                {
-                    "name": "mockEmotion",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/emotion.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): Emotion => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  mediaId: faker.datatype.uuid(),\n  commentId: faker.datatype.uuid(),\n  type: faker.random.arrayElement(Object.values(EmotionType)),\n  user: {\n    ...mockUser(),\n  },\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/event-create.mock.ts": [
-                {
-                    "name": "mockEventCreate",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/event-create.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): EventCreate => ({\n  group: faker.date.soon().getFullYear().toString(),\n  slug: faker.lorem.word().toLowerCase(),\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/event-update.mock.ts": [
-                {
-                    "name": "mockEventUpdate",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/event-update.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): EventUpdate => ({\n  group: faker.date.soon().getFullYear().toString(),\n  slug: faker.lorem.word().toLowerCase(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: [faker.lorem.word(), faker.lorem.word()],\n  dateCreated: faker.date.recent().toISOString(),\n  datePublished: faker.date.recent().toISOString(),\n  location: { ...mockLocation() },\n  useTileImage: faker.datatype.boolean(),\n  text: [faker.lorem.paragraph(), faker.lorem.paragraph()],\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/image.mock.ts": [
-                {
-                    "name": "mockImage",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/image.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): Image => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  fileName: faker.lorem.word().toLowerCase(),\n  state: faker.random.arrayElement(Object.values(MediaState)),\n  order: faker.datatype.number(),\n  isStared: faker.datatype.boolean(),\n  isLoved: faker.datatype.boolean(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: `${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem.word().toLowerCase()}`,\n  dateCreated: faker.date.recent().toISOString(),\n  datePublished: faker.date.recent().toISOString(),\n  isGenerated: faker.datatype.boolean(),\n  isProcessing: faker.datatype.boolean(),\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/image-dimension.mock.ts": [
-                {
-                    "name": "mockImageDimension",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/image-dimension.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): ImageDimension => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  imageId: faker.datatype.uuid(),\n  type: faker.random.arrayElement(Object.values(ImageDimensionType)),\n  pixels: {\n    width: faker.datatype.number(),\n    height: faker.datatype.number(),\n  },\n  threeSixtyImageSettings: {\n    pitch: faker.datatype.number(),\n    yaw: faker.datatype.number(),\n    hfov: faker.datatype.number(),\n  },\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/location.mock.ts": [
-                {
-                    "name": "mockLocation",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/location.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): Location => ({\n  place: faker.company.companyName(),\n  street: faker.address.streetAddress(),\n  stateOrProvince: faker.address.state(),\n  zipCode: faker.address.zipCode(),\n  country: faker.address.country(),\n  geo: {\n    latitude: faker.address.latitude(),\n    longitude: faker.address.longitude(),\n  },\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/user.mock.ts": [
-                {
-                    "name": "mockUser",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/user.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): User => ({\n  email: faker.internet.email(),\n  name: faker.name.findName(faker.name.firstName(), faker.name.lastName()),\n  image: faker.image.dataUri(),\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/video.mock.ts": [
-                {
-                    "name": "mockVideo",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/video.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): Video => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  fileName: faker.lorem.word().toLowerCase(),\n  state: faker.random.arrayElement(Object.values(MediaState)),\n  order: faker.datatype.number(),\n  isStared: faker.datatype.boolean(),\n  title: faker.lorem.sentence(),\n  description: faker.lorem.paragraph(),\n  keywords: `${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem\n    .word()\n    .toLowerCase()}, ${faker.lorem.word().toLowerCase()}`,\n  dateCreated: faker.date.recent().toISOString(),\n  datePublished: faker.date.recent().toISOString(),\n  coverImageId: faker.datatype.uuid(),\n  hlsUrl: faker.internet.url(),\n  isFlyOver: faker.datatype.boolean(),\n  isGenerated: faker.datatype.boolean(),\n  isProcessing: faker.datatype.boolean(),\n})"
-                }
-            ],
-            "libs/shared/types/src/lib/mocks/video-dimension.mock.ts": [
-                {
-                    "name": "mockVideoDimension",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "libs/shared/types/src/lib/mocks/video-dimension.mock.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(): VideoDimension => ({\n  id: faker.datatype.uuid(),\n  entityId: DUMMY_MONGODB_ID,\n  videoId: faker.datatype.uuid(),\n  type: faker.random.arrayElement(Object.values(VideoDimensionType)),\n  pixels: {\n    width: faker.datatype.number(),\n    height: faker.datatype.number(),\n  },\n})"
                 }
             ],
             "libs/api/data/src/lib/entities/photo-of-the-week.functions.ts": [
@@ -74324,116 +74784,6 @@
                 "status": "low"
             },
             {
-                "filePath": "libs/shared/types/src/lib/mocks/comment.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockComment",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/destination-update.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockDestinationUpdate",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/emotion.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockEmotion",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/event-create.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockEventCreate",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/event-update.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockEventUpdate",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/image-dimension.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockImageDimension",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/image.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockImage",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/location.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockLocation",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/user.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockUser",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/video-dimension.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockVideoDimension",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "libs/shared/types/src/lib/mocks/video.mock.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "mockVideo",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "libs/shared/util/src/lib/best-of-to-entity-type.functions.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -77097,6 +77447,66 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "auth0ClientIdSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "auth0ClientIdSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "auth0ClientSecretSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "auth0ClientSecretSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ayrshareApiKeySecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ayrshareApiKeySecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "cdnEndpoint",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -77128,6 +77538,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "cdnProfileUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "connectionStrings",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -77317,6 +77737,166 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "dockerRegistryServerPasswordSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "dockerRegistryServerPasswordSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "dockerRegistryServerUrlSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "dockerRegistryServerUrlSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "dockerRegistryServerUsernameSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "dockerRegistryServerUsernameSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "drpApiAdminKeySecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "drpApiAdminKeySecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "drpApiUrlSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "drpApiUrlSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mediaService",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mediaServiceStorageAccount",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mediaServiceStorageAccountUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mediaServiceUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mongoDbConnectionStringSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mongoDbConnectionStringSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "nginxImage",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -77328,6 +77908,46 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "nginxImageUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "privateBlobConnectionStringSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "privateBlobConnectionStringSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "privateTableConnectionStringSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "privateTableConnectionStringSecretUrn",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -77497,6 +78117,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "publicBlobConnectionStringSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "publicBlobConnectionStringSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "pulumiConfig",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -77547,7 +78187,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "webApp",
+                "name": "tinyPngApiKeySecret",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -77557,7 +78197,27 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "webAppUrn",
+                "name": "tinyPngApiKeySecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "vault",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "vaultUrn",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -77583,12 +78243,32 @@
                 "status": "low"
             },
             {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "websitesEnableAppServiceStorageSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "websitesEnableAppServiceStorageSecretUrn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "tools/ci/pulumi-config.ts",
                 "type": "interface",
                 "linktype": "interface",
                 "name": "PulumiConfig",
                 "coveragePercent": 0,
-                "coverageCount": "0/29",
+                "coverageCount": "0/31",
                 "status": "low"
             },
             {
@@ -77661,16 +78341,6 @@
                 "status": "low"
             },
             {
-                "filePath": "tools/ci/services/app-service.service.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "updateWebApp",
-                "coveragePercent": 100,
-                "coverageCount": "1/1",
-                "status": "very-good"
-            },
-            {
                 "filePath": "tools/ci/services/cdn.service.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -77686,6 +78356,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "createCdnProfile",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/services/key-vault.service.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "createSecret",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/services/key-vault.service.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "createVault",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
