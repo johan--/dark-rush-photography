@@ -58320,7 +58320,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    reserved: true,\n    sku: {\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n      capacity: 1,\n    },\n  })"
+                "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    sku: {\n      capacity: 1,\n      family: 'S',\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n    },\n  })"
             },
             {
                 "name": "createCdnEndpoint",
@@ -58391,6 +58391,26 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(): boolean => {\n  return true;\n}"
+            },
+            {
+                "name": "createMediaService",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/services/media.service.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  mediaServiceName: string,\n  resourceGroup: ResourceGroup,\n  mediaStorageAccount: StorageAccount\n): MediaService =>\n  new MediaService(mediaServiceName, {\n    location: resourceGroup.location,\n    resourceGroupName: resourceGroup.name,\n    storageAccounts: [\n      {\n        id: mediaStorageAccount.id,\n        type: 'Primary',\n      },\n    ],\n  })"
+            },
+            {
+                "name": "createMediaServiceStorageAccount",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/services/media.service.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  mediaServiceStorageAccountName: string,\n  resourceGroup: ResourceGroup\n): StorageAccount =>\n  new StorageAccount(mediaServiceStorageAccountName, {\n    accountName: mediaServiceStorageAccountName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: {\n      name: SkuName.Standard_LRS,\n    },\n    kind: Kind.StorageV2,\n    allowBlobPublicAccess: true,\n    enableHttpsTrafficOnly: true,\n    minimumTlsVersion: 'TLS1_2',\n  })"
             },
             {
                 "name": "createMongoDb",
@@ -58491,16 +58511,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(fileName: string): Observable<string> => {\n  const filePath = path.join(os.tmpdir(), uuidv4(), fileName);\n  return from(fs.ensureFile(filePath)).pipe(mapTo(filePath));\n}"
-            },
-            {
-                "name": "createWebApp",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/services/app-service.service.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(\n  webAppName: string,\n  webAppApiUrl: string,\n  resourceGroup: ResourceGroup,\n  prodMongoDbAccount: DatabaseAccount,\n  prodPrivateStorageAccount: StorageAccount,\n  prodPublicStorageAccount: StorageAccount,\n  containerRegistry: Registry,\n  adminAcrUser: AdminAcrUser,\n  appServicePlan: AppServicePlan\n): WebApp => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    prodMongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n\n  return new WebApp(webAppName, {\n    resourceGroupName: resourceGroup.name,\n    serverFarmId: appServicePlan.id,\n    siteConfig: {\n      appCommandLine:\n        '--multicontainer-config-type compose --multicontainer-config-file docker-compose.yml',\n      appSettings: [\n        {\n          name: 'DOCKER_REGISTRY_SERVER_URL',\n          value: `${containerRegistry.name}.azurecr.io`,\n        },\n        {\n          name: 'DOCKER_REGISTRY_SERVER_USERNAME',\n          value: adminAcrUser.username,\n        },\n        {\n          name: 'DOCKER_REGISTRY_SERVER_PASSWORD',\n          value: adminAcrUser.password,\n        },\n        {\n          name: 'NX_DRP_API_URL',\n          value: webAppApiUrl,\n        },\n        {\n          name: 'NX_MONGO_DB_CONNECTION_STRING',\n          value: connectionStrings.apply(\n            (cs) => cs.connectionStrings![0].connectionString\n          ),\n        },\n        {\n          name: 'NX_PRIVATE_BLOB_CONNECTION_STRING',\n          value: prodPrivateStorageAccount.primaryEndpoints.blob,\n        },\n        {\n          name: 'NX_PRIVATE_TABLE_CONNECTION_STRING',\n          value: prodPrivateStorageAccount.primaryEndpoints.table,\n        },\n        {\n          name: 'NX_PUBLIC_BLOB_CONNECTION_STRING',\n          value: prodPublicStorageAccount.primaryEndpoints.blob,\n        },\n        {\n          name: 'NX_DRP_API_ADMIN_KEY',\n          value: process.env.NX_DRP_API_ADMIN_KEY,\n        },\n        {\n          name: 'NX_AUTH0_CLIENT_ID',\n          value: process.env.NX_AUTH0_CLIENT_ID,\n        },\n        {\n          name: 'NX_AUTH0_CLIENT_SECRET',\n          value: process.env.NX_AUTH0_CLIENT_SECRET,\n        },\n        {\n          name: 'NX_TINY_PNG_API_KEY',\n          value: process.env.NX_TINY_PNG_API_KEY,\n        },\n        {\n          name: 'NX_AYRSHARE_API_KEY',\n          value: process.env.NX_AYRSHARE_API_KEY,\n        },\n      ],\n    },\n  });\n}"
             },
             {
                 "name": "DEFAULT_ENTITY_GROUP",
@@ -61613,26 +61623,6 @@
                 "defaultValue": "createAction(\n  '[Destination] Update Destination Success',\n  props<{ updatedDestination: Update<Destination> }>()\n)"
             },
             {
-                "name": "uploadBufferToBlob$",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared-server/util/src/lib/azure-storage/azure-storage.functions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(\n  connectionString: string,\n  azureStorageType: AzureStorageType,\n  buffer: Buffer,\n  blobPath: string\n): Observable<BlobUploadCommonResponse> => {\n  Logger.log(\n    `Uploading buffer to blob path ${blobPath}`,\n    uploadBufferToBlob$.name\n  );\n  return getAzureStorageBlockBlobClient$(\n    connectionString,\n    azureStorageType,\n    blobPath\n  ).pipe(\n    switchMap((blockBlobClient) => {\n      return from(blockBlobClient.uploadData(buffer));\n    })\n  );\n}"
-            },
-            {
-                "name": "uploadStreamToBlob$",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/shared-server/util/src/lib/azure-storage/azure-storage.functions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(\n  connectionString: string,\n  azureStorageType: AzureStorageType,\n  stream: Readable,\n  blobPath: string\n): Observable<BlobUploadCommonResponse> => {\n  Logger.log(\n    `Uploading stream to blob path ${blobPath}`,\n    uploadStreamToBlob$.name\n  );\n  return getAzureStorageBlockBlobClient$(\n    connectionString,\n    azureStorageType,\n    blobPath\n  ).pipe(\n    switchMap((blockBlobClient) => {\n      return from(blockBlobClient.uploadStream(stream));\n    })\n  );\n}"
-            },
-            {
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "libs/website/data/src/lib/store/destination/destination.selectors.ts",
@@ -61748,6 +61738,38 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "createAction(\n  '[Review] Update Review Success',\n  props<{ updatedReview: Update<Review> }>()\n)"
+            },
+            {
+                "name": "updateWebApp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/services/app-service.service.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  webAppName: string,\n  webAppApiUrl: string,\n  resourceGroup: ResourceGroup,\n  prodMongoDbAccount: DatabaseAccount,\n  prodPrivateStorageAccount: StorageAccount,\n  prodPublicStorageAccount: StorageAccount,\n  containerRegistry: Registry,\n  adminAcrUser: AdminAcrUser,\n  appServicePlan: AppServicePlan\n): WebApp => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    prodMongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n\n  return new WebApp(\n    webAppName,\n    {\n      resourceGroupName: resourceGroup.name,\n      serverFarmId: appServicePlan.id,\n      siteConfig: {\n        appSettings: [\n          {\n            name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE',\n            value: 'true',\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_URL',\n            value: `${containerRegistry.name}.azurecr.io`,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_USERNAME',\n            value: adminAcrUser.username,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_PASSWORD',\n            value: adminAcrUser.password,\n          },\n          {\n            name: 'NX_DRP_API_URL',\n            value: webAppApiUrl,\n          },\n          {\n            name: 'NX_MONGO_DB_CONNECTION_STRING',\n            value: connectionStrings.apply(\n              (cs) => cs.connectionStrings![0].connectionString\n            ),\n          },\n          {\n            name: 'NX_PRIVATE_BLOB_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_PRIVATE_TABLE_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.table,\n          },\n          {\n            name: 'NX_PUBLIC_BLOB_CONNECTION_STRING',\n            value: prodPublicStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_DRP_API_ADMIN_KEY',\n            value: process.env.NX_DRP_API_ADMIN_KEY,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_ID',\n            value: process.env.NX_AUTH0_CLIENT_ID,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_SECRET',\n            value: process.env.NX_AUTH0_CLIENT_SECRET,\n          },\n          {\n            name: 'NX_TINY_PNG_API_KEY',\n            value: process.env.NX_TINY_PNG_API_KEY,\n          },\n          {\n            name: 'NX_AYRSHARE_API_KEY',\n            value: process.env.NX_AYRSHARE_API_KEY,\n          },\n        ],\n      },\n    },\n    {\n      //import:\n      //  '/subscriptions/deeabc6a-57e8-40df-889e-eb7f263360cc/resourceGroups/drp-rg/providers/Microsoft.Web/sites/dark-rush-photography',\n      ignoreChanges: [\n        'clientAffinityEnabled',\n        'clientCertEnabled',\n        'clientCertMode',\n        'containerSize',\n        'customDomainVerificationId',\n        'dailyMemoryTimeQuota',\n        'enabled',\n        'hostNameSslStates',\n        'hostNamesDisabled',\n        'httpsOnly',\n        'keyVaultReferenceIdentity',\n        'kind',\n        'redundancyMode',\n        'storageAccountRequired',\n        //'siteConfig',\n      ],\n    }\n  );\n}",
+                "rawdescription": "IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)",
+                "description": "<p>IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)</p>\n"
+            },
+            {
+                "name": "uploadBufferToBlob$",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared-server/util/src/lib/azure-storage/azure-storage.functions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  connectionString: string,\n  azureStorageType: AzureStorageType,\n  buffer: Buffer,\n  blobPath: string\n): Observable<BlobUploadCommonResponse> => {\n  Logger.log(\n    `Uploading buffer to blob path ${blobPath}`,\n    uploadBufferToBlob$.name\n  );\n  return getAzureStorageBlockBlobClient$(\n    connectionString,\n    azureStorageType,\n    blobPath\n  ).pipe(\n    switchMap((blockBlobClient) => {\n      return from(blockBlobClient.uploadData(buffer));\n    })\n  );\n}"
+            },
+            {
+                "name": "uploadStreamToBlob$",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared-server/util/src/lib/azure-storage/azure-storage.functions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  connectionString: string,\n  azureStorageType: AzureStorageType,\n  stream: Readable,\n  blobPath: string\n): Observable<BlobUploadCommonResponse> => {\n  Logger.log(\n    `Uploading stream to blob path ${blobPath}`,\n    uploadStreamToBlob$.name\n  );\n  return getAzureStorageBlockBlobClient$(\n    connectionString,\n    azureStorageType,\n    blobPath\n  ).pipe(\n    switchMap((blockBlobClient) => {\n      return from(blockBlobClient.uploadStream(stream));\n    })\n  );\n}"
             },
             {
                 "name": "userSchema",
@@ -61937,7 +61959,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "createWebApp(\n  pulumiConfig.webAppName,\n  pulumiConfig.webAppApiUrl,\n  resourceGroup,\n  prodMongoDbAccount,\n  prodPrivateStorageAccount,\n  prodPublicStorageAccount,\n  containerRegistry,\n  adminAcrUser,\n  appServicePlan\n)"
+                "defaultValue": "updateWebApp(\n  pulumiConfig.webAppName,\n  pulumiConfig.webAppApiUrl,\n  resourceGroup,\n  prodMongoDbAccount,\n  prodPrivateStorageAccount,\n  prodPublicStorageAccount,\n  containerRegistry,\n  adminAcrUser,\n  appServicePlan\n)"
             },
             {
                 "name": "webAppUrn",
@@ -64920,7 +64942,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "createWebApp(\n  pulumiConfig.webAppName,\n  pulumiConfig.webAppApiUrl,\n  resourceGroup,\n  prodMongoDbAccount,\n  prodPrivateStorageAccount,\n  prodPublicStorageAccount,\n  containerRegistry,\n  adminAcrUser,\n  appServicePlan\n)"
+                    "defaultValue": "updateWebApp(\n  pulumiConfig.webAppName,\n  pulumiConfig.webAppApiUrl,\n  resourceGroup,\n  prodMongoDbAccount,\n  prodPrivateStorageAccount,\n  prodPublicStorageAccount,\n  containerRegistry,\n  adminAcrUser,\n  appServicePlan\n)"
                 },
                 {
                     "name": "webAppUrn",
@@ -65298,17 +65320,19 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    reserved: true,\n    sku: {\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n      capacity: 1,\n    },\n  })"
+                    "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    sku: {\n      capacity: 1,\n      family: 'S',\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n    },\n  })"
                 },
                 {
-                    "name": "createWebApp",
+                    "name": "updateWebApp",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "tools/ci/services/app-service.service.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(\n  webAppName: string,\n  webAppApiUrl: string,\n  resourceGroup: ResourceGroup,\n  prodMongoDbAccount: DatabaseAccount,\n  prodPrivateStorageAccount: StorageAccount,\n  prodPublicStorageAccount: StorageAccount,\n  containerRegistry: Registry,\n  adminAcrUser: AdminAcrUser,\n  appServicePlan: AppServicePlan\n): WebApp => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    prodMongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n\n  return new WebApp(webAppName, {\n    resourceGroupName: resourceGroup.name,\n    serverFarmId: appServicePlan.id,\n    siteConfig: {\n      appCommandLine:\n        '--multicontainer-config-type compose --multicontainer-config-file docker-compose.yml',\n      appSettings: [\n        {\n          name: 'DOCKER_REGISTRY_SERVER_URL',\n          value: `${containerRegistry.name}.azurecr.io`,\n        },\n        {\n          name: 'DOCKER_REGISTRY_SERVER_USERNAME',\n          value: adminAcrUser.username,\n        },\n        {\n          name: 'DOCKER_REGISTRY_SERVER_PASSWORD',\n          value: adminAcrUser.password,\n        },\n        {\n          name: 'NX_DRP_API_URL',\n          value: webAppApiUrl,\n        },\n        {\n          name: 'NX_MONGO_DB_CONNECTION_STRING',\n          value: connectionStrings.apply(\n            (cs) => cs.connectionStrings![0].connectionString\n          ),\n        },\n        {\n          name: 'NX_PRIVATE_BLOB_CONNECTION_STRING',\n          value: prodPrivateStorageAccount.primaryEndpoints.blob,\n        },\n        {\n          name: 'NX_PRIVATE_TABLE_CONNECTION_STRING',\n          value: prodPrivateStorageAccount.primaryEndpoints.table,\n        },\n        {\n          name: 'NX_PUBLIC_BLOB_CONNECTION_STRING',\n          value: prodPublicStorageAccount.primaryEndpoints.blob,\n        },\n        {\n          name: 'NX_DRP_API_ADMIN_KEY',\n          value: process.env.NX_DRP_API_ADMIN_KEY,\n        },\n        {\n          name: 'NX_AUTH0_CLIENT_ID',\n          value: process.env.NX_AUTH0_CLIENT_ID,\n        },\n        {\n          name: 'NX_AUTH0_CLIENT_SECRET',\n          value: process.env.NX_AUTH0_CLIENT_SECRET,\n        },\n        {\n          name: 'NX_TINY_PNG_API_KEY',\n          value: process.env.NX_TINY_PNG_API_KEY,\n        },\n        {\n          name: 'NX_AYRSHARE_API_KEY',\n          value: process.env.NX_AYRSHARE_API_KEY,\n        },\n      ],\n    },\n  });\n}"
+                    "defaultValue": "(\n  webAppName: string,\n  webAppApiUrl: string,\n  resourceGroup: ResourceGroup,\n  prodMongoDbAccount: DatabaseAccount,\n  prodPrivateStorageAccount: StorageAccount,\n  prodPublicStorageAccount: StorageAccount,\n  containerRegistry: Registry,\n  adminAcrUser: AdminAcrUser,\n  appServicePlan: AppServicePlan\n): WebApp => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    prodMongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n\n  return new WebApp(\n    webAppName,\n    {\n      resourceGroupName: resourceGroup.name,\n      serverFarmId: appServicePlan.id,\n      siteConfig: {\n        appSettings: [\n          {\n            name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE',\n            value: 'true',\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_URL',\n            value: `${containerRegistry.name}.azurecr.io`,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_USERNAME',\n            value: adminAcrUser.username,\n          },\n          {\n            name: 'DOCKER_REGISTRY_SERVER_PASSWORD',\n            value: adminAcrUser.password,\n          },\n          {\n            name: 'NX_DRP_API_URL',\n            value: webAppApiUrl,\n          },\n          {\n            name: 'NX_MONGO_DB_CONNECTION_STRING',\n            value: connectionStrings.apply(\n              (cs) => cs.connectionStrings![0].connectionString\n            ),\n          },\n          {\n            name: 'NX_PRIVATE_BLOB_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_PRIVATE_TABLE_CONNECTION_STRING',\n            value: prodPrivateStorageAccount.primaryEndpoints.table,\n          },\n          {\n            name: 'NX_PUBLIC_BLOB_CONNECTION_STRING',\n            value: prodPublicStorageAccount.primaryEndpoints.blob,\n          },\n          {\n            name: 'NX_DRP_API_ADMIN_KEY',\n            value: process.env.NX_DRP_API_ADMIN_KEY,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_ID',\n            value: process.env.NX_AUTH0_CLIENT_ID,\n          },\n          {\n            name: 'NX_AUTH0_CLIENT_SECRET',\n            value: process.env.NX_AUTH0_CLIENT_SECRET,\n          },\n          {\n            name: 'NX_TINY_PNG_API_KEY',\n            value: process.env.NX_TINY_PNG_API_KEY,\n          },\n          {\n            name: 'NX_AYRSHARE_API_KEY',\n            value: process.env.NX_AYRSHARE_API_KEY,\n          },\n        ],\n      },\n    },\n    {\n      //import:\n      //  '/subscriptions/deeabc6a-57e8-40df-889e-eb7f263360cc/resourceGroups/drp-rg/providers/Microsoft.Web/sites/dark-rush-photography',\n      ignoreChanges: [\n        'clientAffinityEnabled',\n        'clientCertEnabled',\n        'clientCertMode',\n        'containerSize',\n        'customDomainVerificationId',\n        'dailyMemoryTimeQuota',\n        'enabled',\n        'hostNameSslStates',\n        'hostNamesDisabled',\n        'httpsOnly',\n        'keyVaultReferenceIdentity',\n        'kind',\n        'redundancyMode',\n        'storageAccountRequired',\n        //'siteConfig',\n      ],\n    }\n  );\n}",
+                    "rawdescription": "IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)",
+                    "description": "<p>IMPORTANT az webapp create must be run manually to import from\nthis method as using multicontainer which Pulumi does not yet support,\n(details in ci.md, multicontainer WebApp)</p>\n"
                 }
             ],
             "tools/ci/services/cdn.service.ts": [
@@ -65399,6 +65423,28 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(): boolean => {\n  return true;\n}"
+                }
+            ],
+            "tools/ci/services/media.service.ts": [
+                {
+                    "name": "createMediaService",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/services/media.service.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(\n  mediaServiceName: string,\n  resourceGroup: ResourceGroup,\n  mediaStorageAccount: StorageAccount\n): MediaService =>\n  new MediaService(mediaServiceName, {\n    location: resourceGroup.location,\n    resourceGroupName: resourceGroup.name,\n    storageAccounts: [\n      {\n        id: mediaStorageAccount.id,\n        type: 'Primary',\n      },\n    ],\n  })"
+                },
+                {
+                    "name": "createMediaServiceStorageAccount",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/services/media.service.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(\n  mediaServiceStorageAccountName: string,\n  resourceGroup: ResourceGroup\n): StorageAccount =>\n  new StorageAccount(mediaServiceStorageAccountName, {\n    accountName: mediaServiceStorageAccountName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: {\n      name: SkuName.Standard_LRS,\n    },\n    kind: Kind.StorageV2,\n    allowBlobPublicAccess: true,\n    enableHttpsTrafficOnly: true,\n    minimumTlsVersion: 'TLS1_2',\n  })"
                 }
             ],
             "tools/ci/services/mongo-db.service.ts": [
@@ -77619,10 +77665,10 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "createWebApp",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
+                "name": "updateWebApp",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
             },
             {
                 "filePath": "tools/ci/services/cdn.service.ts",
@@ -77640,6 +77686,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "createCdnProfile",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/services/media.service.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "createMediaService",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/services/media.service.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "createMediaServiceStorageAccount",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
