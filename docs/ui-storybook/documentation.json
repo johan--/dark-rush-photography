@@ -58933,26 +58933,6 @@
                 "defaultValue": "dockerRegistryServerPasswordSecret.urn"
             },
             {
-                "name": "dockerRegistryServerUsernameSecret",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-USERNAME',\n  adminAcrUser.username,\n  resourceGroup,\n  vault\n)"
-            },
-            {
-                "name": "dockerRegistryServerUsernameSecretUrn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "dockerRegistryServerUsernameSecret.urn"
-            },
-            {
                 "name": "DocumentSchema",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61773,6 +61753,123 @@
                 "defaultValue": "createAction(\n  '[Destination] Update Destination Success',\n  props<{ updatedDestination: Update<Destination> }>()\n)"
             },
             {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/destination/destination.selectors.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "destinationAdapter.getSelectors()"
+            },
+            {
+                "name": "updateEvent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Event] Update Event',\n  props<{ event: Event }>()\n)"
+            },
+            {
+                "name": "updateEventFailure",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Event] Update Event Failure',\n  props<{ error: string }>()\n)"
+            },
+            {
+                "name": "updateEventSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Event] Update Event Success',\n  props<{ updatedEvent: Update<Event> }>()\n)"
+            },
+            {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.selectors.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "eventAdapter.getSelectors()"
+            },
+            {
+                "name": "updatePhotoOfTheWeek",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week',\n  props<{ photoOfTheWeek: PhotoOfTheWeek }>()\n)"
+            },
+            {
+                "name": "updatePhotoOfTheWeekFailure",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Failure',\n  props<{ error: string }>()\n)"
+            },
+            {
+                "name": "updatePhotoOfTheWeekSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Success',\n  props<{ updatedPhotoOfTheWeek: Update<PhotoOfTheWeek> }>()\n)"
+            },
+            {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.selectors.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "photoOfTheWeekAdapter.getSelectors()"
+            },
+            {
+                "name": "updateReview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Review] Update Review',\n  props<{ review: Review }>()\n)"
+            },
+            {
+                "name": "updateReviewFailure",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Review] Update Review Failure',\n  props<{ error: string }>()\n)"
+            },
+            {
+                "name": "updateReviewSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Review] Update Review Success',\n  props<{ updatedReview: Update<Review> }>()\n)"
+            },
+            {
                 "name": "uploadBufferToBlob$",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -62011,123 +62108,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "websiteImage.urn"
-            },
-            {
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/destination/destination.selectors.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "destinationAdapter.getSelectors()"
-            },
-            {
-                "name": "updateEvent",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Event] Update Event',\n  props<{ event: Event }>()\n)"
-            },
-            {
-                "name": "updateEventFailure",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Event] Update Event Failure',\n  props<{ error: string }>()\n)"
-            },
-            {
-                "name": "updateEventSuccess",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Event] Update Event Success',\n  props<{ updatedEvent: Update<Event> }>()\n)"
-            },
-            {
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.selectors.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "eventAdapter.getSelectors()"
-            },
-            {
-                "name": "updatePhotoOfTheWeek",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week',\n  props<{ photoOfTheWeek: PhotoOfTheWeek }>()\n)"
-            },
-            {
-                "name": "updatePhotoOfTheWeekFailure",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Failure',\n  props<{ error: string }>()\n)"
-            },
-            {
-                "name": "updatePhotoOfTheWeekSuccess",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Success',\n  props<{ updatedPhotoOfTheWeek: Update<PhotoOfTheWeek> }>()\n)"
-            },
-            {
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.selectors.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "photoOfTheWeekAdapter.getSelectors()"
-            },
-            {
-                "name": "updateReview",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Review] Update Review',\n  props<{ review: Review }>()\n)"
-            },
-            {
-                "name": "updateReviewFailure",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Review] Update Review Failure',\n  props<{ error: string }>()\n)"
-            },
-            {
-                "name": "updateReviewSuccess",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Review] Update Review Success',\n  props<{ updatedReview: Update<Review> }>()\n)"
             },
             {
                 "name": "writeStreamToFile$",
@@ -64901,26 +64881,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "dockerRegistryServerPasswordSecret.urn"
-                },
-                {
-                    "name": "dockerRegistryServerUsernameSecret",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-USERNAME',\n  adminAcrUser.username,\n  resourceGroup,\n  vault\n)"
-                },
-                {
-                    "name": "dockerRegistryServerUsernameSecretUrn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "dockerRegistryServerUsernameSecret.urn"
                 },
                 {
                     "name": "drpApiAdminKeySecret",
@@ -77512,26 +77472,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "dockerRegistryServerPasswordSecretUrn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "dockerRegistryServerUsernameSecret",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "dockerRegistryServerUsernameSecretUrn",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
