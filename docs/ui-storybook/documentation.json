@@ -8245,12 +8245,12 @@
         },
         {
             "name": "PulumiConfig",
-            "id": "interface-PulumiConfig-14be0153cbf781227772e6ff618c141c",
+            "id": "interface-PulumiConfig-0aafbb9d9fef808c4dd72ad2200654e3",
             "file": "tools/ci/pulumi-config.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Config } from '@pulumi/pulumi';\n\nconst config = new Config();\n\nexport interface PulumiConfig {\n  readonly location: string;\n  readonly resourceGroupName: string;\n  readonly devMongoDbAccountName: string;\n  readonly devMongoDbDatabaseName: string;\n  readonly devMongoDbCollectionName: string;\n  readonly prodMongoDbAccountName: string;\n  readonly prodMongoDbDatabaseName: string;\n  readonly prodMongoDbCollectionName: string;\n  readonly devPrivateStorageAccountName: string;\n  readonly devPrivateBlobContainerName: string;\n  readonly devPrivateUsersTableName: string;\n  readonly prodPrivateStorageAccountName: string;\n  readonly prodPrivateBlobContainerName: string;\n  readonly prodPrivateUsersTableName: string;\n  readonly devPublicStorageAccountName: string;\n  readonly devPublicBlobContainerName: string;\n  readonly prodPublicStorageAccountName: string;\n  readonly prodPublicBlobContainerName: string;\n  readonly cdnProfileName: string;\n  readonly cdnEndpointName: string;\n  readonly containerRegistryName: string;\n  readonly nginxImageName: string;\n  readonly websiteImageName: string;\n  readonly apiImageName: string;\n  readonly socketImageName: string;\n  readonly mediaServiceStorageAccountName: string;\n  readonly mediaServiceName: string;\n  readonly vaultName: string;\n  readonly webAppApiUrl: string;\n  readonly appServicePlanName: string;\n}\n\nexport const getPulumiConfig = (): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n  appServicePlanName: config.require('appServicePlanName'),\n});\n",
+            "sourceCode": "import { Config } from '@pulumi/pulumi';\n\nconst config = new Config();\n\nexport interface PulumiConfig {\n  readonly location: string;\n  readonly resourceGroupName: string;\n  readonly devMongoDbAccountName: string;\n  readonly devMongoDbDatabaseName: string;\n  readonly devMongoDbCollectionName: string;\n  readonly prodMongoDbAccountName: string;\n  readonly prodMongoDbDatabaseName: string;\n  readonly prodMongoDbCollectionName: string;\n  readonly devPrivateStorageAccountName: string;\n  readonly devPrivateBlobContainerName: string;\n  readonly devPrivateUsersTableName: string;\n  readonly prodPrivateStorageAccountName: string;\n  readonly prodPrivateBlobContainerName: string;\n  readonly prodPrivateUsersTableName: string;\n  readonly devPublicStorageAccountName: string;\n  readonly devPublicBlobContainerName: string;\n  readonly prodPublicStorageAccountName: string;\n  readonly prodPublicBlobContainerName: string;\n  readonly cdnProfileName: string;\n  readonly cdnEndpointName: string;\n  readonly containerRegistryName: string;\n  readonly nginxImageName: string;\n  readonly websiteImageName: string;\n  readonly apiImageName: string;\n  readonly socketImageName: string;\n  readonly mediaServiceStorageAccountName: string;\n  readonly mediaServiceName: string;\n  readonly vaultName: string;\n}\n\nexport const getPulumiConfig = (): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n});\n",
             "properties": [
                 {
                     "name": "apiImageName",
@@ -8260,18 +8260,6 @@
                     "optional": false,
                     "description": "",
                     "line": 29,
-                    "modifierKind": [
-                        132
-                    ]
-                },
-                {
-                    "name": "appServicePlanName",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 35,
                     "modifierKind": [
                         132
                     ]
@@ -8584,18 +8572,6 @@
                     "optional": false,
                     "description": "",
                     "line": 33,
-                    "modifierKind": [
-                        132
-                    ]
-                },
-                {
-                    "name": "webAppApiUrl",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 34,
                     "modifierKind": [
                         132
                     ]
@@ -58097,26 +58073,6 @@
                 "defaultValue": "'APP_GUARD'"
             },
             {
-                "name": "appServicePlan",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAppServicePlan(\n  pulumiConfig.appServicePlanName,\n  resourceGroup\n)"
-            },
-            {
-                "name": "appServicePlanUrn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "appServicePlan.urn"
-            },
-            {
                 "name": "AUTH0_AUDIENCE",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -58377,16 +58333,6 @@
                 "defaultValue": "new Config()"
             },
             {
-                "name": "connectionStrings",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "all([\n  resourceGroup.name,\n  prodMongoDbAccount.name,\n]).apply(([resourceGroupName, accountName]) =>\n  listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n)"
-            },
-            {
                 "name": "containerRegistry",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -58405,16 +58351,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "containerRegistry.urn"
-            },
-            {
-                "name": "createAppServicePlan",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/services/app-service.service.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    sku: {\n      capacity: 1,\n      family: 'S',\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n    },\n  })"
             },
             {
                 "name": "createCdnEndpoint",
@@ -58997,26 +58933,6 @@
                 "defaultValue": "dockerRegistryServerPasswordSecret.urn"
             },
             {
-                "name": "dockerRegistryServerUrlSecret",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-URL',\n  interpolate`${containerRegistry.name}.azurecr.io`,\n  resourceGroup,\n  vault\n)"
-            },
-            {
-                "name": "dockerRegistryServerUrlSecretUrn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "dockerRegistryServerUrlSecret.urn"
-            },
-            {
                 "name": "dockerRegistryServerUsernameSecret",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -59105,26 +59021,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "drpApiAdminKeySecret.urn"
-            },
-            {
-                "name": "drpApiUrlSecret",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createSecret(\n  'NX-DRP-API-URL',\n  interpolate`${pulumiConfig.webAppApiUrl}`,\n  resourceGroup,\n  vault\n)"
-            },
-            {
-                "name": "drpApiUrlSecretUrn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "tools/ci/index.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "drpApiUrlSecret.urn"
             },
             {
                 "name": "DUMMY_MONGODB_ID",
@@ -59767,6 +59663,16 @@
                 "defaultValue": "(\n  media: Media,\n  mediaDimensionType: ImageDimensionType | VideoDimensionType\n): string => {\n  const blobPrefix = getAzureStorageBlobPrefix(media);\n  return `${blobPrefix}/${mediaDimensionType.toLowerCase()}/${media.fileName}`;\n}"
             },
             {
+                "name": "getConnectionString",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "tools/ci/services/mongo-db.service.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  resourceGroup: ResourceGroup,\n  mongoDbAccount: DatabaseAccount\n): Output<string> => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    mongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n  return connectionStrings.apply(\n    (cs) => cs.connectionStrings![0].connectionString\n  );\n}"
+            },
+            {
                 "name": "getDestination",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -60104,7 +60010,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n  appServicePlanName: config.require('appServicePlanName'),\n})"
+                "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n})"
             },
             {
                 "name": "getReview",
@@ -60804,7 +60710,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "createSecret(\n  'NX-MONGO-DB-CONNECTION-STRING',\n  connectionStrings.apply((cs) => cs.connectionStrings![0].connectionString),\n  resourceGroup,\n  vault\n)"
+                "defaultValue": "createSecret(\n  'NX-MONGO-DB-CONNECTION-STRING',\n  getConnectionString(resourceGroup, prodMongoDbAccount),\n  resourceGroup,\n  vault\n)"
             },
             {
                 "name": "mongoDbConnectionStringSecretUrn",
@@ -61867,123 +61773,6 @@
                 "defaultValue": "createAction(\n  '[Destination] Update Destination Success',\n  props<{ updatedDestination: Update<Destination> }>()\n)"
             },
             {
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/destination/destination.selectors.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "destinationAdapter.getSelectors()"
-            },
-            {
-                "name": "updateEvent",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Event] Update Event',\n  props<{ event: Event }>()\n)"
-            },
-            {
-                "name": "updateEventFailure",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Event] Update Event Failure',\n  props<{ error: string }>()\n)"
-            },
-            {
-                "name": "updateEventSuccess",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Event] Update Event Success',\n  props<{ updatedEvent: Update<Event> }>()\n)"
-            },
-            {
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/event/event.selectors.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "eventAdapter.getSelectors()"
-            },
-            {
-                "name": "updatePhotoOfTheWeek",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week',\n  props<{ photoOfTheWeek: PhotoOfTheWeek }>()\n)"
-            },
-            {
-                "name": "updatePhotoOfTheWeekFailure",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Failure',\n  props<{ error: string }>()\n)"
-            },
-            {
-                "name": "updatePhotoOfTheWeekSuccess",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Success',\n  props<{ updatedPhotoOfTheWeek: Update<PhotoOfTheWeek> }>()\n)"
-            },
-            {
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.selectors.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "photoOfTheWeekAdapter.getSelectors()"
-            },
-            {
-                "name": "updateReview",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Review] Update Review',\n  props<{ review: Review }>()\n)"
-            },
-            {
-                "name": "updateReviewFailure",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Review] Update Review Failure',\n  props<{ error: string }>()\n)"
-            },
-            {
-                "name": "updateReviewSuccess",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "createAction(\n  '[Review] Update Review Success',\n  props<{ updatedReview: Update<Review> }>()\n)"
-            },
-            {
                 "name": "uploadBufferToBlob$",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -62224,24 +62013,121 @@
                 "defaultValue": "websiteImage.urn"
             },
             {
-                "name": "websitesEnableAppServiceStorageSecret",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "tools/ci/index.ts",
+                "file": "libs/website/data/src/lib/store/destination/destination.selectors.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "createSecret(\n  'WEBSITES-ENABLE-APP-SERVICE-STORAGE',\n  interpolate`true`,\n  resourceGroup,\n  vault\n)"
+                "defaultValue": "destinationAdapter.getSelectors()"
             },
             {
-                "name": "websitesEnableAppServiceStorageSecretUrn",
+                "name": "updateEvent",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "tools/ci/index.ts",
+                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "websitesEnableAppServiceStorageSecret.urn"
+                "defaultValue": "createAction(\n  '[Event] Update Event',\n  props<{ event: Event }>()\n)"
+            },
+            {
+                "name": "updateEventFailure",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Event] Update Event Failure',\n  props<{ error: string }>()\n)"
+            },
+            {
+                "name": "updateEventSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Event] Update Event Success',\n  props<{ updatedEvent: Update<Event> }>()\n)"
+            },
+            {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/event/event.selectors.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "eventAdapter.getSelectors()"
+            },
+            {
+                "name": "updatePhotoOfTheWeek",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week',\n  props<{ photoOfTheWeek: PhotoOfTheWeek }>()\n)"
+            },
+            {
+                "name": "updatePhotoOfTheWeekFailure",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Failure',\n  props<{ error: string }>()\n)"
+            },
+            {
+                "name": "updatePhotoOfTheWeekSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Photo of the Week] Update Photo of the Week Success',\n  props<{ updatedPhotoOfTheWeek: Update<PhotoOfTheWeek> }>()\n)"
+            },
+            {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/photo-of-the-week/photo-of-the-week.selectors.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "photoOfTheWeekAdapter.getSelectors()"
+            },
+            {
+                "name": "updateReview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Review] Update Review',\n  props<{ review: Review }>()\n)"
+            },
+            {
+                "name": "updateReviewFailure",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Review] Update Review Failure',\n  props<{ error: string }>()\n)"
+            },
+            {
+                "name": "updateReviewSuccess",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/website/data/src/lib/store/review/review.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction(\n  '[Review] Update Review Success',\n  props<{ updatedReview: Update<Review> }>()\n)"
             },
             {
                 "name": "writeStreamToFile$",
@@ -64717,26 +64603,6 @@
                     "defaultValue": "apiImage.urn"
                 },
                 {
-                    "name": "appServicePlan",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "createAppServicePlan(\n  pulumiConfig.appServicePlanName,\n  resourceGroup\n)"
-                },
-                {
-                    "name": "appServicePlanUrn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "appServicePlan.urn"
-                },
-                {
                     "name": "auth0ClientIdSecret",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -64835,16 +64701,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "cdnProfile.urn"
-                },
-                {
-                    "name": "connectionStrings",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "all([\n  resourceGroup.name,\n  prodMongoDbAccount.name,\n]).apply(([resourceGroupName, accountName]) =>\n  listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n)"
                 },
                 {
                     "name": "containerRegistry",
@@ -65047,26 +64903,6 @@
                     "defaultValue": "dockerRegistryServerPasswordSecret.urn"
                 },
                 {
-                    "name": "dockerRegistryServerUrlSecret",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "createSecret(\n  'DOCKER-REGISTRY-SERVER-URL',\n  interpolate`${containerRegistry.name}.azurecr.io`,\n  resourceGroup,\n  vault\n)"
-                },
-                {
-                    "name": "dockerRegistryServerUrlSecretUrn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "dockerRegistryServerUrlSecret.urn"
-                },
-                {
                     "name": "dockerRegistryServerUsernameSecret",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -65105,26 +64941,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "drpApiAdminKeySecret.urn"
-                },
-                {
-                    "name": "drpApiUrlSecret",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "createSecret(\n  'NX-DRP-API-URL',\n  interpolate`${pulumiConfig.webAppApiUrl}`,\n  resourceGroup,\n  vault\n)"
-                },
-                {
-                    "name": "drpApiUrlSecretUrn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "drpApiUrlSecret.urn"
                 },
                 {
                     "name": "mediaService",
@@ -65174,7 +64990,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "createSecret(\n  'NX-MONGO-DB-CONNECTION-STRING',\n  connectionStrings.apply((cs) => cs.connectionStrings![0].connectionString),\n  resourceGroup,\n  vault\n)"
+                    "defaultValue": "createSecret(\n  'NX-MONGO-DB-CONNECTION-STRING',\n  getConnectionString(resourceGroup, prodMongoDbAccount),\n  resourceGroup,\n  vault\n)"
                 },
                 {
                     "name": "mongoDbConnectionStringSecretUrn",
@@ -65535,26 +65351,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "websiteImage.urn"
-                },
-                {
-                    "name": "websitesEnableAppServiceStorageSecret",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "createSecret(\n  'WEBSITES-ENABLE-APP-SERVICE-STORAGE',\n  interpolate`true`,\n  resourceGroup,\n  vault\n)"
-                },
-                {
-                    "name": "websitesEnableAppServiceStorageSecretUrn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/index.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "websitesEnableAppServiceStorageSecret.urn"
                 }
             ],
             "libs/web-socket/util/src/lib/api/api-auth.functions.ts": [
@@ -65890,19 +65686,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n  webAppApiUrl: config.require('webAppApiUrl'),\n  appServicePlanName: config.require('appServicePlanName'),\n})"
-                }
-            ],
-            "tools/ci/services/app-service.service.ts": [
-                {
-                    "name": "createAppServicePlan",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "tools/ci/services/app-service.service.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "(\n  appServicePlanName: string,\n  resourceGroup: ResourceGroup\n): AppServicePlan =>\n  new AppServicePlan(appServicePlanName, {\n    name: appServicePlanName,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    kind: 'Linux',\n    sku: {\n      capacity: 1,\n      family: 'S',\n      name: 'S1',\n      size: 'S1',\n      tier: 'Standard',\n    },\n  })"
+                    "defaultValue": "(): PulumiConfig => ({\n  location: config.require('location'),\n  resourceGroupName: config.require('resourceGroupName'),\n  devMongoDbAccountName: config.require('devMongoDbAccountName'),\n  devMongoDbDatabaseName: config.require('devMongoDbDatabaseName'),\n  devMongoDbCollectionName: config.require('devMongoDbCollectionName'),\n  prodMongoDbAccountName: config.require('prodMongoDbAccountName'),\n  prodMongoDbDatabaseName: config.require('prodMongoDbDatabaseName'),\n  prodMongoDbCollectionName: config.require('prodMongoDbCollectionName'),\n  devPrivateStorageAccountName: config.require('devPrivateStorageAccountName'),\n  devPrivateBlobContainerName: config.require('devPrivateBlobContainerName'),\n  devPrivateUsersTableName: config.require('devPrivateUsersTableName'),\n  prodPrivateStorageAccountName: config.require(\n    'prodPrivateStorageAccountName'\n  ),\n  prodPrivateBlobContainerName: config.require('prodPrivateBlobContainerName'),\n  prodPrivateUsersTableName: config.require('prodPrivateUsersTableName'),\n  devPublicStorageAccountName: config.require('devPublicStorageAccountName'),\n  devPublicBlobContainerName: config.require('devPublicBlobContainerName'),\n  prodPublicStorageAccountName: config.require('prodPublicStorageAccountName'),\n  prodPublicBlobContainerName: config.require('prodPublicBlobContainerName'),\n  cdnProfileName: config.require('cdnProfileName'),\n  cdnEndpointName: config.require('cdnEndpointName'),\n  containerRegistryName: config.require('containerRegistryName'),\n  nginxImageName: config.require('nginxImageName'),\n  websiteImageName: config.require('websiteImageName'),\n  apiImageName: config.require('apiImageName'),\n  socketImageName: config.require('socketImageName'),\n  mediaServiceStorageAccountName: config.require(\n    'mediaServiceStorageAccountName'\n  ),\n  mediaServiceName: config.require('mediaServiceName'),\n  vaultName: config.require('vaultName'),\n})"
                 }
             ],
             "tools/ci/services/cdn.service.ts": [
@@ -66037,6 +65821,16 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(\n  mongoDbCollectionName: string,\n  resourceGroup: ResourceGroup,\n  mongoDbAccount: DatabaseAccount,\n  mongoDbDatabase: MongoDBResourceMongoDBDatabase\n): MongoDBResourceMongoDBCollection =>\n  new MongoDBResourceMongoDBCollection(mongoDbCollectionName, {\n    collectionName: mongoDbCollectionName,\n    databaseName: mongoDbDatabase.name,\n    accountName: mongoDbAccount.name,\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    resource: {\n      id: mongoDbCollectionName,\n      indexes: [\n        {\n          key: {\n            keys: ['_id'],\n          },\n          options: {\n            unique: true,\n          },\n        },\n        {\n          key: {\n            keys: ['type'],\n          },\n          options: {\n            unique: false,\n          },\n        },\n      ],\n      shardKey: {\n        type: 'Hash',\n      },\n    },\n  })"
+                },
+                {
+                    "name": "getConnectionString",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "tools/ci/services/mongo-db.service.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(\n  resourceGroup: ResourceGroup,\n  mongoDbAccount: DatabaseAccount\n): Output<string> => {\n  const connectionStrings = all([\n    resourceGroup.name,\n    mongoDbAccount.name,\n  ]).apply(([resourceGroupName, accountName]) =>\n    listDatabaseAccountConnectionStrings({ resourceGroupName, accountName })\n  );\n  return connectionStrings.apply(\n    (cs) => cs.connectionStrings![0].connectionString\n  );\n}"
                 }
             ],
             "libs/web-socket/data/src/lib/api/emotion-api.ts": [
@@ -77427,26 +77221,6 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "appServicePlan",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "appServicePlanUrn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "auth0ClientIdSecret",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -77538,16 +77312,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "cdnProfileUrn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "connectionStrings",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -77757,26 +77521,6 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "dockerRegistryServerUrlSecret",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "dockerRegistryServerUrlSecretUrn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "dockerRegistryServerUsernameSecret",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -77808,26 +77552,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "drpApiAdminKeySecretUrn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "drpApiUrlSecret",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "drpApiUrlSecretUrn",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -78243,32 +77967,12 @@
                 "status": "low"
             },
             {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "websitesEnableAppServiceStorageSecret",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/index.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "websitesEnableAppServiceStorageSecretUrn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "tools/ci/pulumi-config.ts",
                 "type": "interface",
                 "linktype": "interface",
                 "name": "PulumiConfig",
                 "coveragePercent": 0,
-                "coverageCount": "0/31",
+                "coverageCount": "0/29",
                 "status": "low"
             },
             {
@@ -78326,16 +78030,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "getAdminAcrUser",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "tools/ci/services/app-service.service.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "createAppServicePlan",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -78436,6 +78130,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "createMongoDbCollection",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "tools/ci/services/mongo-db.service.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getConnectionString",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
