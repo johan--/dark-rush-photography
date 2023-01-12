@@ -86,7 +86,7 @@
     "@nguniversal/express-engine": "^12.1.0",
     "@ungap/custom-elements": "^1.0.0",
     "class-transformer": "^0.4.0",
-    "class-validator": "^0.13.1",
+    "class-validator": "^0.14.0",
     "core-js": "^3.15.2",
     "datauri": "^3.0.0",
     "dist-exiftool": "^10.53.0",
